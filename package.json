@@ -1,6 +1,6 @@
 {
   "name": "neflaria-js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript library for interacting with the Neflaria API",
   "main": "index.js",
   "scripts": {

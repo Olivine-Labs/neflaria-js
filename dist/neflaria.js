@@ -2,17 +2,19 @@
 module.exports = {
   models: {
     Base: require('./src/models/base'),
-    News: require('./src/models/news')
+    News: require('./src/models/news'),
+    Player: require('./src/models/player')
   },
 
   collections: {
     Base: require('./src/collections/base'),
-    News: require('./src/collections/news')
+    News: require('./src/collections/news'),
+    Player: require('./src/collections/player')
   }
 };
 
 
-},{"./src/collections/base":5,"./src/collections/news":6,"./src/models/base":7,"./src/models/news":8}],2:[function(require,module,exports){
+},{"./src/collections/base":5,"./src/collections/news":6,"./src/collections/player":7,"./src/models/base":8,"./src/models/news":9,"./src/models/player":10}],2:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -8834,7 +8836,7 @@ BaseCollection.__extends = function(child, parent){
 module.exports = BaseCollection;
 
 
-},{"../models/base":7,"lodash":3,"q":4}],6:[function(require,module,exports){
+},{"../models/base":8,"lodash":3,"q":4}],6:[function(require,module,exports){
 var Q = require('q'),
     Base = require('./base');
 
@@ -8849,7 +8851,22 @@ Base.__extends(NewsCollection, Base);
 module.exports = NewsCollection;
 
 
-},{"../models/news":8,"./base":5,"q":4}],7:[function(require,module,exports){
+},{"../models/news":9,"./base":5,"q":4}],7:[function(require,module,exports){
+var Q = require('q'),
+    Base = require('./base');
+
+function PlayerCollection(){
+  this.model = require('../models/player');
+
+  return PlayerCollection.__super__.constructor.apply(this, arguments);
+}
+
+Base.__extends(PlayerCollection, Base);
+
+module.exports = PlayerCollection;
+
+
+},{"../models/player":10,"./base":5,"q":4}],8:[function(require,module,exports){
 var Q = require('q'),
     _ = require('lodash');
 
@@ -8927,7 +8944,7 @@ Base.__extends = function(child, parent){
 module.exports = Base;
 
 
-},{"lodash":3,"q":4}],8:[function(require,module,exports){
+},{"lodash":3,"q":4}],9:[function(require,module,exports){
 var Q = require('q'),
     Base = require('./base');
 
@@ -8940,4 +8957,17 @@ Base.__extends(News, Base);
 module.exports = News;
 
 
-},{"./base":7,"q":4}]},{},[1])
+},{"./base":8,"q":4}],10:[function(require,module,exports){
+var Q = require('q'),
+    Base = require('./base');
+
+function Player(){
+  return Player.__super__.constructor.apply(this, arguments);
+}
+
+Base.__extends(Player, Base);
+
+module.exports = Player;
+
+
+},{"./base":8,"q":4}]},{},[1])
