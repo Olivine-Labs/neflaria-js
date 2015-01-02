@@ -3,10 +3,7 @@ import * as q from 'q';
 import * as querystring from 'querystring';
 
 import Account from '../models/account';
-import Comment from '../models/comment';
-import Link from '../models/link';
-import Vote from '../models/vote';
-
+import News from '../models/news';
 
 import * as LRU from 'lru-cache';
 

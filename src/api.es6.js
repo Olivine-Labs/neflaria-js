@@ -2,7 +2,7 @@ import v1 from './endpoints/v1';
 
 import Account from './models/account';
 import Base from './models/base';
-import News from './models/award';
+import News from './models/news';
 
 var models = {
   Account,
