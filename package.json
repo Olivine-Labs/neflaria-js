@@ -1,0 +1,35 @@
+{
+  "name": "neflaria-js",
+  "version": "1.0.0",
+  "description": "node and browser neflaria api library",
+  "main": "src/api.es6.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --harmony --recursive ./test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Olivine-Labs/neflaria-js.git"
+  },
+  "keywords": [
+    "neflaria",
+    "api"
+  ],
+  "author": "Olivine Labs <projects@olivinelabs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Olivine-Labs/neflaria-js/issues"
+  },
+  "homepage": "https://github.com/Olivine-Labs/neflaria-js",
+  "dependencies": {
+    "6to5": "^1.9.6",
+    "harmony-reflect": "^1.1.0",
+    "q": "^1.0.1",
+    "superagent": "^0.20.0"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "sinon": "^1.10.3",
+    "sinon-chai": "^2.5.0"
+  }
+}
